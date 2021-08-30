@@ -1,0 +1,282 @@
+
+.carousel-div{
+    width: 100%;
+    padding: 0px 100px;
+    background-color: #223039;
+}
+
+.carousel-slide{
+    padding: 100px;
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.carousel-outer-box{
+    padding: 20px 0px;
+}
+.carousel-box{
+    background-color: #1b272e;
+    width: fit-content;
+    padding: 20px 100px;
+    border-radius: 10px;
+    margin: 0px 10px;
+    transition: all 500ms;
+}
+
+.carousel-text-1{
+    color: #bfaf8e;
+    font-size: 40px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+.carousel-text-2{
+    color: #bfaf8e;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+
+.carousel-div-2{
+    padding: 10px 0px;
+}
+
+.carousel-img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid #bfaf8e;
+    border-radius: 50%;
+    transition: all 500ms;
+}
+
+.carousel-text-3{
+    color: #bfaf8e;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+.carousel-text-4{
+    color: #bfaf8e;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 500ms;
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel-div{
+        padding: 0px 30px;
+    }
+    .carousel-slide{
+        padding: 20px 40px;
+    }
+    .carousel-outer-box{
+        padding: 20px 30px;
+    }
+    .carousel-box{
+        padding: 20px 50px;
+        margin: 10px 10px;
+    }
+    
+    .carousel-div-2{
+        padding: 10px 0px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-div{
+        padding: 0px 30px;
+    }
+    .carousel-slide{
+        padding: 20px 40px;
+    }
+    .carousel-outer-box{
+        padding: 20px 30px;
+    }
+    .carousel-box{
+        padding: 20px 50px;
+        margin: 10px 10px;
+    }
+    
+    .carousel-div-2{
+        padding: 10px 0px;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .carousel-div{
+        padding: 0px 0px;
+    }
+    .carousel-slide{
+        padding: 20px 30px;
+    }
+    .carousel-outer-box{
+        padding: 20px 20px;
+    }
+    .carousel-box{
+        padding: 20px 50px;
+        margin: 10px 10px;
+    }
+    
+    .carousel-text-1{
+        font-size: 30px;
+    }
+    
+    .carousel-text-2{
+        font-size: 15px;
+    }
+    
+    
+    .carousel-div-2{
+        padding: 10px 0px;
+    }
+    
+    .carousel-img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .carousel-text-3{ 
+        font-size: 15px;
+        
+    }
+    
+    .carousel-text-4{
+        font-size: 15px;
+    }
+}
+.box-1:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
+
+.box-2:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
+
+.box-3:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
+
+.box-4:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
+
+.box-5:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
+
+.box-6:hover{
+
+    background-color: #bfaf8e;
+    
+    .carousel-img{
+        border: 5px solid #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-3{
+        color: #223039;
+        transform: scale(1.05);
+
+    }
+    
+    .carousel-text-4{
+        color: #223039;
+        transform: scale(1.05);
+    }
+}
