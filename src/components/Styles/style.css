@@ -111,19 +111,13 @@
     z-index: 2;
     display: flex;
     visibility: hidden;
+    display: none;
 }
-.mobile-view-headerlogo-div{
-    height: 100%;
-    width: 100%;
+.mobile-view-header-logo-div{
     text-align: center;
     display: block;
 }
-.mobile-view-header-logo{
-    font-size: 30px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 600;
-    color: white;
-}
+
 .mobile-view-header-sidenav{
     color: white;
     font-size: 30px;
@@ -171,20 +165,24 @@
 @media screen and (max-width: 1024px) {
     .header-outer-div{
         visibility: hidden;
+        display: none;
     }
 
     .mobile-view-header{
         visibility: visible;
+        display: block;
     }
 }
 
 @media screen and (max-width: 768px) {
     .header-outer-div{
         visibility: hidden;
+        display: none;
     }
 
     .mobile-view-header{
         visibility: visible;
+        display: block;
     }
 }
 

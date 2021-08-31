@@ -44,6 +44,7 @@ function CarouselSection(props) {
         height: '100vh',
         color: '#fff',
         background: '#364d79',
+        width: 'fit-content',
       };
 
     return (
@@ -53,10 +54,10 @@ function CarouselSection(props) {
                     <div style={contentStyle}>
                         <div className="overlay"/>
                         <img className="caroysel-img" src={BG1} alt="bg1"/>
-                        <section class="carousel-text-div">
-                            <div class="text-1">Best Place to buy cattle</div>
-                            <div class="text-2">Palh, Cattle Farm</div>
-                            <div class="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
+                        <section className="carousel-text-div">
+                            <div className="text-1">Best Place to buy cattle</div>
+                            <div className="text-2">Palh, Cattle Farm</div>
+                            <div className="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
                             <div className="carousel-btn-div">
                                 <a href={`${props.BaseURL}/shop`} className="carousel-btn">Our Shop</a>
                             </div>
@@ -67,10 +68,10 @@ function CarouselSection(props) {
                     <div style={contentStyle}>
                         <div className="overlay"/>
                         <img className="caroysel-img" src={BG2} alt="bg2"/>
-                        <section class="carousel-text-div">
-                            <div class="text-1">Best Place to buy cattle</div>
-                            <div class="text-2">Palh, Cattle Farm</div>
-                            <div class="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
+                        <section className="carousel-text-div">
+                            <div className="text-1">Best Place to buy cattle</div>
+                            <div className="text-2">Palh, Cattle Farm</div>
+                            <div className="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
                             <div className="carousel-btn-div">
                                 <a href={`${props.BaseUrl}/shop`} className="carousel-btn">Our Shop</a>
                             </div>
@@ -81,10 +82,10 @@ function CarouselSection(props) {
                     <div style={contentStyle}>
                         <div className="overlay"/>
                         <img className="caroysel-img" src={BG3} alt="bg3"/>
-                        <section class="carousel-text-div">
-                            <div class="text-1">Best Place to buy cattle</div>
-                            <div class="text-2">Palh, Cattle Farm</div>
-                            <div class="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
+                        <section className="carousel-text-div">
+                            <div className="text-1">Best Place to buy cattle</div>
+                            <div className="text-2">Palh, Cattle Farm</div>
+                            <div className="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
                             <div className="carousel-btn-div">
                                 <a href={`${props.BaseUrl}/shop`} className="carousel-btn">Our Shop</a>
                             </div>

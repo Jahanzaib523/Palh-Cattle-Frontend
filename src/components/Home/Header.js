@@ -27,7 +27,7 @@ function Header(props) {
                 <div className="mobile-view-header-sidenav-logo">
                     <MenuUnfoldOutlined className="mobile-view-header-sidenav" onClick={showDrawer}/>
                 </div>
-                <div className="mobile-view-headerlogo-div">
+                <div className="mobile-view-header-logo-div">
                     <img className="header-logo" src={logo} alt="logo"/>
                 </div>
                 <Drawer
@@ -47,17 +47,19 @@ function Header(props) {
                     <p className="header-drawer-btn" onClick={ContactScroll}><WhatsAppOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Contact Us</p>
                 </Drawer>
             </div>
-            <div className="header-outer-div d-flex justify-content-between">
-                <div className="logo-div">
-                    <img className="header-logo" src={logo} alt="logo"/>
-                </div>
-                <div className="header-features-div">
-                    <span onClick={AboutScroll}>About Us</span>
-                    <span onClick={ServiceScroll}>Services</span>
-                    <a href={`${props.BaseURL}/shop`}>Shop</a>
-                    <span onClick={ClientScroll}>Clients Review</span>
-                    <span onClick={TestimonialScroll}>Testimonials</span>
-                    <span onClick={ContactScroll}>Contact Us</span>
+            <div className="header-outer-div">
+                <div className="d-flex justify-content-between">
+                    <div className="logo-div">
+                        <img className="header-logo" src={logo} alt="logo"/>
+                    </div>
+                    <div className="header-features-div">
+                        <span onClick={AboutScroll}>About Us</span>
+                        <span onClick={ServiceScroll}>Services</span>
+                        <a href={`${props.BaseURL}/shop`}>Shop</a>
+                        <span onClick={ClientScroll}>Clients Review</span>
+                        <span onClick={TestimonialScroll}>Testimonials</span>
+                        <span onClick={ContactScroll}>Contact Us</span>
+                    </div>
                 </div>
             </div>
         </div>
