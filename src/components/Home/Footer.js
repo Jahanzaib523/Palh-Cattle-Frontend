@@ -10,7 +10,8 @@ function TestFooter() {
                     <div className="row">
                         <div className="col-div col-12 col-xl-6">
                             <p className="footer-about-heading">About Palh</p>
-                            <p className="footer-about-text">Far far away, behind the word mountains, far from the countries<br/>Vokalia and Consonantia, there live the blind texts.</p>
+                            <p className="footer-about-text">Palh Cattle farm came into being in 2019. Initially, the initiative was taken by Aurangzeb Palh & siblings. 
+                            The main purpose of the project is buy cattle, grow them up & then selling them on special occasions.</p>
                         </div>
                         <div className="col-div col-12 col-xl-6">
                             <p className="footer-about-heading">Connect</p>
@@ -27,22 +28,22 @@ function TestFooter() {
                         <div className="col-div col-12 col-xl-6">
                             <p className="footer-about-heading">SERVICES</p>
                             <p className="footer-about-text">Cattle Shop</p>
-                            <p className="footer-about-text">Different Breeds</p>
-                            <p className="footer-about-text">Different Cattles</p>
+                            <p className="footer-about-text">Selling Cattle</p>
+                            <p className="footer-about-text">Buying Cattle</p>
                             <p className="footer-about-text">Contact Seller</p>
                         </div>
                         <div className="col-div col-12 col-xl-6">
                             <p className="footer-contact-heading">CONTACT</p>
                             <p className="footer-about-text">Pak Singhar, Tando Allah Yar, Sindh Tando Allahyar, Sindh, Pakistan</p>
                             <p><a href="tel://923479666466" className="footer-contact-text">+92 347-9666466</a></p>
-                            <p><a href="mailto:palh@gmail.com" className="footer-contact-text">palh@gmail.com</a></p>
+                            <p><a href="mailto:palh@gmail.com" className="footer-contact-text">palhcattle@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="footer-bottom-div d-flex justify-content-between">
                 <p className="footer-about-text footer-bottom-text">© 2021 Palh Cattle Farm . All Right Reserved</p>
-                <p className="footer-about-text footer-bottom-text">DESIGNED BY <strong>ANONYMOUS</strong></p>
+                <p className="footer-about-text footer-bottom-text">Developed By: <strong>NODEPTR.</strong></p>
             </div>
         </div>
     )

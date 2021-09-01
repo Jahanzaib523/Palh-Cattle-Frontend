@@ -25,7 +25,7 @@ function Shop(props) {
                 redirect: 'follow'
             };
             
-            fetch("http://192.168.1.3:5000/cattle", requestOptions)
+            fetch("http://192.168.18.70:5000/cattle", requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if(result !== null){
@@ -83,9 +83,6 @@ function Shop(props) {
                     case 5:
                         min = 300000; max=400000
                         break;
-                    case 6:
-                        min = 400000; max=500000
-                        break; 
                     default:
                         break;
                 }
@@ -94,7 +91,7 @@ function Shop(props) {
                     redirect: 'follow'
                 };
                 
-                fetch(`http://192.168.1.3:5000/cattle/${type}/${min}/${max}`, requestOptions)
+                fetch(`http://192.168.18.70:5000/cattle/${type}/${min}/${max}`, requestOptions)
                 .then(response => response.json())
                 .then(result => {
                     if(result !== null){
@@ -156,7 +153,6 @@ function Shop(props) {
                         <Radio value={3}>100,000 - 200,000 Rs</Radio>
                         <Radio value={4}>200,000 - 300,000 Rs</Radio>
                         <Radio value={5}>300,000 - 400,000 Rs</Radio>
-                        <Radio value={6}>400,000 - 500,000 Rs</Radio>
                         </Space>
                     </Radio.Group>
                     <div className="sidenav-btn-outer-div">

@@ -12,7 +12,7 @@
    import './app.scss';
 
     function App() {
-      const [SiteType] = useState("production");
+      const [SiteType] = useState("development");
       const [developmentURL] = useState("http://localhost:3000");
       const [productionURL] = useState("http://localhost:5000");
       const [validlink, setValidLink] = useState(false);
