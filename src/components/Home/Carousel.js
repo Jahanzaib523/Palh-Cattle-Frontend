@@ -44,7 +44,6 @@ function CarouselSection(props) {
         height: '100vh',
         color: '#fff',
         background: '#364d79',
-        width: 'fit-content',
       };
 
     return (
@@ -73,7 +72,7 @@ function CarouselSection(props) {
                             <div className="text-2">Palh, Cattle Farm</div>
                             <div className="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
                             <div className="carousel-btn-div">
-                                <a href={`${props.BaseUrl}/shop`} className="carousel-btn">Our Shop</a>
+                                <a href={`${props.BaseURL}/shop`} className="carousel-btn">Our Shop</a>
                             </div>
                         </section>
                     </div>
@@ -87,7 +86,7 @@ function CarouselSection(props) {
                             <div className="text-2">Palh, Cattle Farm</div>
                             <div className="text-3">where you can <span className="typing">{`${words[index].substring(0, subIndex)}${blink ? "|" : " "}`}</span></div>
                             <div className="carousel-btn-div">
-                                <a href={`${props.BaseUrl}/shop`} className="carousel-btn">Our Shop</a>
+                                <a href={`${props.BaseURL}/shop`} className="carousel-btn">Our Shop</a>
                             </div>
                         </section>
                     </div>

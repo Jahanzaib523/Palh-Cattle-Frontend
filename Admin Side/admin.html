@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <title>Admin Page</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <div class="admin-page-outer-div">
+        <div class="admin-page-header">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <img class="admin-page-logo" src="logo.png" alt="logo"/>
+                </div>
+                <div class="d-flex">
+                    <div class="header-btn-div" onclick="myFunction('AllCattles', 'All')">
+                        <div class="header-btn" id="All" >All Cattles</div>
+                    </div>
+                    <div class="header-btn-div" onclick="myFunction('AddCattle', 'Add')">
+                        <div class="header-btn" id="Add">Add Cattle</div>
+                    </div>
+                    <div class="header-btn-div" onclick="myFunction('UpdateCattle', 'Update')">
+                        <div class="header-btn" id="Update">Update Cattle</div>
+                    </div>
+                    <div class="header-btn-div" onclick="myFunction('DeleteCattle', 'Delete')">
+                        <div class="header-btn" id="Delete">Delete Cattle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-view-admin-page-header">
+            <div class="d-flex justify-content-center">
+                <img class="admin-page-logo" src="logo.png" alt="logo"/>
+            </div>
+            <div>
+                <div class="header-btn-div d-flex justify-content-center" onclick="myFunction('AllCattles')">
+                    <div class="header-btn" >All Cattles</div>
+                </div>
+                <div class="header-btn-div d-flex justify-content-center" onclick="myFunction('AddCattle')">
+                    <div class="header-btn">Add Cattle</div>
+                </div>
+                <div class="header-btn-div d-flex justify-content-center" onclick="myFunction('UpdateCattle')">
+                    <div class="header-btn" >Update Cattle</div>
+                </div>
+                <div class="header-btn-div d-flex justify-content-center" onclick="myFunction('DeleteCattle')">
+                    <div class="header-btn" >Delete Cattle</div>
+                </div>
+            </div>
+        </div>
+        <div class="admin-panel">
+            <div class="all-cattles-div" id="AllCattles">
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Discription</th>
+                        <th scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td>Cow</td>
+                        <td>This is a Cow</td>
+                        <td>20,000</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>Cow</td>
+                        <td>This is a Cow</td>
+                        <td>20,000</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Buffalo</td>
+                        <td>This is a Buffalo</td>
+                        <td>20,000</td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="add-cattle-div" id="AddCattle">
+                <div class="row">
+                    <div class="col form-cols">
+                        <form>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Type</span>
+                                <input type="text" class="form-control" placeholder="Enter Cattle Type">
+                            </div>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Price</span>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Cattle Price" aria-describedby="basic-addon1">
+                                    <span class="input-group-text" id="basic-addon1">Rs</span>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col form-cols">
+                        <form>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Discription</span>
+                                <textarea class="form-control" placeholder="Cattle Discription"></textarea>
+                            </div>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Add Cattle Images</span>
+                                <input type="file" name="file"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex input-div">
+                    <div class="form-btn-div d-flex justify-content-center">
+                        <div class="form-btn" >Submit</div>
+                    </div>
+                </div>
+            </div>
+            <div id="UpdateCattle" class="update-cattle-div">
+                <div class="input-div">
+                    <div class="form-btn-div d-flex justify-content-center">
+                        <div class="d-flex input-div">
+                            <span class="form-label">Cattle ID</span>
+                            <input type="text" class="form-control" placeholder="Enter Cattle ID">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="form-btn" >Get Cattle</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col form-cols">
+                        <form>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Type</span>
+                                <input type="text" class="form-control" placeholder="Enter Cattle Type">
+                            </div>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Price</span>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Enter Cattle Price" aria-describedby="basic-addon1">
+                                    <span class="input-group-text" id="basic-addon1">Rs</span>
+                                </div> 
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col form-cols">
+                        <form>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Cattle Discription</span>
+                                <textarea class="form-control" placeholder="Cattle Discription"></textarea>
+                            </div>
+                            <div class="d-flex input-div">
+                                <span class="form-label">Add Cattle Images</span>
+                                <input type="file" name="file"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="d-flex input-div">
+                    <div class="form-btn-div d-flex justify-content-center">
+                        <div class="form-btn" >Update</div>
+                    </div>
+                </div>
+            </div>
+            <div id="DeleteCattle" class="delete-cattle-div">
+                <div class="input-div">
+                    <div class="form-btn-div d-flex justify-content-center">
+                        <div class="d-flex input-div">
+                            <span class="form-label">Cattle ID</span>
+                            <input type="text" class="form-control" placeholder="Enter Cattle ID">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <div class="form-btn" >Delete Cattle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction(id,btn) {
+          var x = document.getElementById(id);
+          var BTN = document.getElementById(btn);
+
+        //   var AllBtn = document.getElementById('All');
+        //   var AddBtn = document.getElementById('Add');
+        //   var UpdateBtn = document.getElementById('Update');
+        //   var DeleteBtn = document.getElementById('Delete');
+
+        //   $("All").toggleClass('header-btn')
+        //   $("Add").toggleClass('header-btn')
+        //   $("Update").toggleClass('header-btn')
+        //   $("Delete").toggleClass('header-btn')
+
+
+        //   BTN.style.backgroundColor = "#bfaf8e";
+        //   BTN.style.color = "#223039";
+          
+          var All = document.getElementById('AllCattles');
+          var Add = document.getElementById('AddCattle');
+          var Update = document.getElementById('UpdateCattle');
+          var Delete = document.getElementById('DeleteCattle');
+
+          All.style.display = "none";
+          Add.style.display = "none";
+          Update.style.display = "none";
+          Delete.style.display = "none";
+
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>

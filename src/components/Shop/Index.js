@@ -1,9 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react'
 import logo from '../Home/Images/Logo.png'
 import { Select, Radio, Space, Card, Avatar, Modal, Carousel, Empty, Drawer, Spin} from 'antd';
-import BG1 from '../Home/Images/Picture_1.png'
-import BG2 from '../Home/Images/Picture_2.png'
-import BG3 from '../Home/Images/Picture_3.png'
 import GoogleMapReact from 'google-map-react';
 
 const { Meta } = Card;
@@ -176,6 +173,7 @@ function Shop(props) {
                         visible={visible}
                         height={'fit-content'}
                         key={'top'}
+                        className="drawer-box"
                     >
                         <div className="sidenav-logo-div d-flex justify-content-center">
                             <a href={`${props.BaseURL}/home`}><img className="sidenav-logo" src={logo} alt="logo"/></a>
@@ -215,6 +213,15 @@ function Shop(props) {
                         </div>
                     </Drawer>
                 </div>
+                <div className="search-btn-div">
+                    <div className="d-flex justify-content-center">
+                        <div className="shop-logo-div"><img className="shop-logo" src={logo} alt={'logo'}/></div>
+                    </div>
+                    <div className="search-btn-block d-flex justify-content-end">
+                        <div className="search-btn" onClick={showDrawer}>Filter</div>
+                    </div>
+                </div>
+                
                 {
                     data === null ?
                     <div className="animal-inner-div">
@@ -225,10 +232,6 @@ function Shop(props) {
                             </div>
                             :
                             <div className="empty-box">
-                                <div className="search-btn-div d-flex justify-content-between">
-                                    <div className="shop-logo-div"><img className="shop-logo" src={logo} alt={'logo'}/></div>
-                                    <div className="search-btn" onClick={showDrawer}>Filter</div>
-                                </div>
                                 <div>
                                     <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
                                 </div>
@@ -246,8 +249,7 @@ function Shop(props) {
                                 <img
                                     alt="example"
                                     className="card-cover-img"
-                                    src={`http://192.168.1.3:5000/uploads/${card['productImage']}`}
-                                    // src={`./uploads/${card['productImage'].replace('uploads\\','')}`}
+                                    src={card['productImage']}
                                 />
                                 }
                             >
@@ -261,17 +263,17 @@ function Shop(props) {
                     )
                 }
                 <div>
-                    <Modal width={1000} footer={null} closable={false} className="model-box" visible={isModalVisible} onCancel={handleCancel}>
-                        <Carousel autoplay>
+                    <Modal width={1000} footer={null} closable={true} className="model-box" visible={isModalVisible} onCancel={handleCancel}>
+                        <Carousel autoplay className="model-carousel-box">
                             <div>
-                                <img className="model-caroysel-img" src={BG1} alt="bg1"/>
+                                <img className="model-caroysel-img" src={modelData !== null ? modelData['productImage'] : ''} alt="bg1"/>
                             </div>
-                            <div>
+                            {/* <div>
                                 <img className="model-caroysel-img" src={BG2} alt="bg1"/>
                             </div>
                             <div>
                                 <img className="model-caroysel-img" src={BG3} alt="bg1"/>
-                            </div>
+                            </div> */}
                         </Carousel>
                         <div className="model-discription-div">
                             <p className="model-discription-heading">Cattle Details</p>

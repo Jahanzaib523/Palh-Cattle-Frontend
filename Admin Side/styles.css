@@ -1,0 +1,203 @@
+/*
+--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+--------------------------------------------------------------
+1. Login Page
+2. Admin Page
+
+*/
+
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+/***
+
+====================================================================
+1. Login Page
+====================================================================
+
+***/
+
+.outer-div{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f9f8f3;
+
+}
+
+.form-div{
+    padding: 20px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: #f9f8f3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.form-logo-img-div{
+    padding: 20px 130px;
+}
+.form-logo-img{
+    width: 250px;
+    height: 200px;
+}
+
+.login-btn-outer-div{
+    padding: 30px 30px 30px 20px;
+}
+.login-btn{
+    border: 1px solid #223039;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 30px;
+    transition: all 500ms;
+    color: #223039;
+    font-weight: bold;
+}
+
+.login-btn:hover{
+    background-color: #223039;
+    color: #bfaf8e;
+    cursor: pointer;
+}
+
+
+/***
+
+====================================================================
+1. Admin Page
+====================================================================
+
+***/
+
+.admin-page-outer-div{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100vh;
+}
+
+.admin-page-header{
+    padding: 10px 20px;
+    background-color: #223039;
+    display: block;
+}
+
+.mobile-view-admin-page-header{
+    padding: 10px 20px;
+    background-color: #223039;
+    display: none;
+}
+
+.admin-page-logo{
+    width: 150px;
+    height: 100px;
+}
+
+.header-btn-div{
+    padding: 20px 0px 20px 20px;
+    width: 100%;
+}
+
+.header-btn{
+    padding: 10px 20px;
+    border: 1px solid #bfaf8e;
+    background-color: #223039;
+    color: #bfaf8e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 30px;
+    width: 150px;
+    transition: all 500ms;
+}
+
+.header-btn:hover{
+    background-color: #bfaf8e;
+    color: #223039;
+    cursor: pointer;
+}
+
+.admin-panel{
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.add-cattle-div{
+    display: none;
+}
+
+.form-label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 150px;
+    font-size: 17px;
+    padding: 5px 0px;
+}
+
+.form-cols{
+    padding: 20px 100px;
+}
+
+.input-div{
+    padding: 20px 0px;
+}
+
+.form-btn-div{
+    padding: 20px 0px 20px 20px;
+    width: 100%;
+}
+
+.form-btn{
+    padding: 10px 20px;
+    border: 1px solid #223039;
+    color: #223039;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 30px;
+    width: fit-content;
+    transition: all 500ms;
+}
+
+.form-btn:hover{
+    background-color: #223039;
+    color: #bfaf8e;
+    cursor: pointer;
+}
+
+.all-cattles-div{
+    padding: 20px 50px;
+}
+
+.update-cattle-div{
+    display: none;
+}
+
+.delete-cattle-div{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .admin-page-header{
+        display: none;
+    }
+    
+    .mobile-view-admin-page-header{
+        display: block;
+    }
+
+    .form-cols{
+        padding: 20px 30px;
+    }
+
+    .all-cattles-div{
+        padding: 20px 20px;
+    }
+    
+}

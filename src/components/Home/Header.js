@@ -7,6 +7,12 @@ import logo from './Images/Logo.png'
 function Header(props) {
     const [visible, setVisible] = useState(false);
 
+    const AboutScroll = () => window.scrollTo({ behavior: 'smooth', top: props.AboutRef.current.offsetTop })   
+    const TestimonialScroll = () => window.scrollTo({ behavior: 'smooth', top: props.TestimonialRef.current.offsetTop })   
+    const ClientScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ClientRef.current.offsetTop })   
+    const ServiceScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ServiceRef.current.offsetTop })   
+    const ContactScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ContactRef.current.offsetTop }) 
+
     const showDrawer = () => {
         setVisible(true)
     };
@@ -15,11 +21,30 @@ function Header(props) {
         setVisible(false)
     };
 
-    const AboutScroll = () => window.scrollTo({ behavior: 'smooth', top: props.AboutRef.current.offsetTop })   
-    const TestimonialScroll = () => window.scrollTo({ behavior: 'smooth', top: props.TestimonialRef.current.offsetTop })   
-    const ClientScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ClientRef.current.offsetTop })   
-    const ServiceScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ServiceRef.current.offsetTop })   
-    const ContactScroll = () => window.scrollTo({ behavior: 'smooth', top: props.ContactRef.current.offsetTop })   
+    const drawerClose = (btn) => {
+        onClose()
+        switch (btn) {
+            case 'about':
+                AboutScroll();
+                break;
+            case 'testimonial':
+                TestimonialScroll();
+                break;
+            case 'client':
+                ClientScroll();
+                break;
+            case 'service':
+                ServiceScroll();
+                break;
+            case 'contact':
+                ContactScroll();
+                break;
+            default:
+                break;
+        }
+    }
+
+      
 
     return (
         <div>
@@ -39,12 +64,12 @@ function Header(props) {
                     visible={visible}
                     key={'left'}
                     >
-                    <p className="header-drawer-btn" onClick={AboutScroll}><ProjectOutlined style={{fontSize: '30px', margin: '0px 10px'}} />About Us</p>
-                    <p className="header-drawer-btn" onClick={ServiceScroll}><SolutionOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Services</p>
+                    <p className="header-drawer-btn" onClick={() => {drawerClose('about')}}><ProjectOutlined style={{fontSize: '30px', margin: '0px 10px'}} />About Us</p>
+                    <p className="header-drawer-btn" onClick={() => {drawerClose('service')}}><SolutionOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Services</p>
                     <p className="header-drawer-btn"><a href={`${props.BaseURL}/shop`}><ShopOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Shop</a></p>
-                    <p className="header-drawer-btn" onClick={ClientScroll}><UserOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Clients Review</p>
-                    <p className="header-drawer-btn" onClick={TestimonialScroll}><TeamOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Testimonials</p>
-                    <p className="header-drawer-btn" onClick={ContactScroll}><WhatsAppOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Contact Us</p>
+                    <p className="header-drawer-btn" onClick={() => {drawerClose('client')}}><UserOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Clients Review</p>
+                    <p className="header-drawer-btn" onClick={() => {drawerClose('testimonial')}}><TeamOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Testimonials</p>
+                    <p className="header-drawer-btn" onClick={() => {drawerClose('contact')}}><WhatsAppOutlined style={{fontSize: '30px', margin: '0px 10px'}} />Contact Us</p>
                 </Drawer>
             </div>
             <div className="header-outer-div">

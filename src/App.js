@@ -12,9 +12,9 @@
    import './app.scss';
 
     function App() {
-      const [SiteType] = useState("development");
+      const [SiteType] = useState("production");
       const [developmentURL] = useState("http://localhost:3000");
-      const [productionURL] = useState("");
+      const [productionURL] = useState("http://localhost:5000");
       const [validlink, setValidLink] = useState(false);
       const [show, setShow] = useState(false);
       const [Loader, setLoader] = useState(true);
